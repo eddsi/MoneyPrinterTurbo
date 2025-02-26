@@ -3,9 +3,7 @@ x-common-volumes: &common-volumes
 
 services:
   webui:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ethst/moneyprinterturbo:latest
     container_name: "webui"
     ports:
       - "8501:8501"
@@ -13,9 +11,7 @@ services:
     volumes: *common-volumes
     restart: always
   api:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ethst/moneyprinterturbo:latest
     container_name: "api"
     ports:
       - "8080:8080"
